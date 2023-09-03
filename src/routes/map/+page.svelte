@@ -15,21 +15,24 @@
     let map;
 
     onMount(() => {
-        // Initialize the OpenLayers map
-        /* map = new Map({
+        // Create a View
+        const view = new View({
+            center: [0, 0],
+            zoom: 2,
+        });
+
+        // Create a Map instance and set the target element
+        map = new Map({
             target: "map",
             layers: [
                 new TileLayer({
                     source: new OSM(),
                 }),
             ],
-            view: new View({
-                center: [0, 0],
-                zoom: 2,
-            }),
-        }); */
-        // Load the GeoJSON data
-        fetch(geojson)
+            view: view,
+        });
+
+        fetch("countries.geojson")
             .then((response) => response.json())
             .then((geojson) => {
                 // Create a VectorSource from the GeoJSON data

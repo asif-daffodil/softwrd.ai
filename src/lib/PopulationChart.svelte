@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import Chart from "chart.js/auto";
-    import { countryDataStore } from "../../countryDataStore";
+    import { countryDataStore } from "../countryDataStore";
 
     let top10PopulatedCountries = [];
 

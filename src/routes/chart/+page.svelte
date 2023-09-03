@@ -1,6 +1,6 @@
 <script>
     import { afterUpdate } from "svelte";
-    import { countryDataStore } from "../../../countryDataStore";
+    import { countryDataStore } from "../../countryDataStore";
     import PopulationChart from "../../lib/PopulationChart.svelte";
     afterUpdate(async () => {
         // Fetch data from the API if it hasn't been fetched yet
