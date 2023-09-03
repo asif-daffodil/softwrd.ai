@@ -1,10 +1,8 @@
 <script>
-    import Navlink from "../../lib/Navlink.svelte";
+    import { fly } from "svelte/transition";
 </script>
-
-<Navlink />
 <!-- tailwind container middle -->
-<div class="container mx-auto grid min-h-screen md:grid-cols-2">
+<div class="container mx-auto grid min-h-screen md:grid-cols-2 overflow-hidden" transition:fly={{x:200}}>
     <div class="grid">
         <div
             class="md:col-span-2 md:row-span-3 bg-blue-400 min-h-[320px] md:min-h-[auto]"

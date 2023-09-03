@@ -56,8 +56,6 @@
     });
 </script>
 
-<Navlink />
-
 <div id="map" />
 
 <style>
